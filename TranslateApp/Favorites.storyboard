@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="17A365" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dZJ-bQ-IHT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorites Controller-->
+        <scene sceneID="yId-ZV-VVb">
+            <objects>
+                <viewController id="dZJ-bQ-IHT" customClass="FavoritesController" customModule="TranslateApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nzj-eD-Ls4"/>
+                        <viewControllerLayoutGuide type="bottom" id="uf1-KP-Ihf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gbd-t3-cfm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zyE-4G-sLT">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TranslateCell" rowHeight="120" id="dYF-DG-toS" customClass="TranslateCell" customModule="TranslateApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dYF-DG-toS" id="Tdm-fl-awJ">
+                                            <frame key="frameInset" width="343" height="119"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5yc-pT-sRj">
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUG-qt-YWG">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TranslatedText" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlh-FS-5qG">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5yc-pT-sRj" firstAttribute="centerY" secondItem="Tdm-fl-awJ" secondAttribute="centerY" id="DIM-u6-uwr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5yc-pT-sRj" secondAttribute="trailing" id="Ff3-6k-0iy"/>
+                                                <constraint firstItem="5yc-pT-sRj" firstAttribute="leading" secondItem="Tdm-fl-awJ" secondAttribute="leadingMargin" id="XNn-uK-Jun"/>
+                                                <constraint firstItem="5yc-pT-sRj" firstAttribute="top" secondItem="Tdm-fl-awJ" secondAttribute="topMargin" constant="8" id="l7C-im-9cz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textBefore" destination="nUG-qt-YWG" id="Xcp-Nb-CRz"/>
+                                            <outlet property="translatedText" destination="hlh-FS-5qG" id="NGE-K8-taG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dZJ-bQ-IHT" id="cWV-bS-vQm"/>
+                                    <outlet property="delegate" destination="dZJ-bQ-IHT" id="I7n-0Z-eqA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zyE-4G-sLT" secondAttribute="trailing" id="0wk-1x-m7A"/>
+                            <constraint firstItem="zyE-4G-sLT" firstAttribute="leading" secondItem="gbd-t3-cfm" secondAttribute="leadingMargin" id="48w-ae-UTn"/>
+                            <constraint firstItem="zyE-4G-sLT" firstAttribute="top" secondItem="Nzj-eD-Ls4" secondAttribute="bottom" constant="-20" id="hjW-et-yE5"/>
+                            <constraint firstItem="uf1-KP-Ihf" firstAttribute="top" secondItem="zyE-4G-sLT" secondAttribute="bottom" id="u9i-Da-iC0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="zyE-4G-sLT" id="nSe-YT-GlZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDI-xH-Hgu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="-273.01349325337333"/>
+        </scene>
+    </scenes>
+</document>

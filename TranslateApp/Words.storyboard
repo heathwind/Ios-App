@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="17A365" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e5m-ho-5pL">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Words Controller-->
+        <scene sceneID="u7I-we-9dr">
+            <objects>
+                <viewController id="x5Q-7Q-447" customClass="WordsController" customModule="TranslateApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S4D-in-L4C"/>
+                        <viewControllerLayoutGuide type="bottom" id="X9W-5m-J1V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1UX-Vf-Cw9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbr-8t-fR7">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Show Favorites"/>
+                                <connections>
+                                    <segue destination="iPJ-y8-yht" kind="show" id="XRV-Jf-CkG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IN-8E-anY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="AjQ-Vb-l4n"/>
+                                    <constraint firstAttribute="height" constant="43" id="GK0-1w-BK9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Translate"/>
+                                <connections>
+                                    <action selector="translateText:" destination="x5Q-7Q-447" eventType="touchUpInside" id="teK-WD-eGD"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello, World!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eje-Xt-Iz3">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CRK-Za-8Yf">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="YMn-iT-vvk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AeZ-hv-Bts">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add to Favorites"/>
+                                <connections>
+                                    <action selector="addToFavorites:" destination="x5Q-7Q-447" eventType="touchUpInside" id="1aI-8m-elO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Sbr-8t-fR7" secondAttribute="bottom" constant="87" id="1Oe-JV-fDn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AeZ-hv-Bts" secondAttribute="trailing" constant="70" id="1QR-Pl-9ex"/>
+                            <constraint firstItem="CRK-Za-8Yf" firstAttribute="top" secondItem="7IN-8E-anY" secondAttribute="bottom" constant="8" symbolic="YES" id="3Ch-yi-xJE"/>
+                            <constraint firstItem="eje-Xt-Iz3" firstAttribute="top" secondItem="S4D-in-L4C" secondAttribute="bottom" constant="17" id="CWI-5j-7zw"/>
+                            <constraint firstItem="7IN-8E-anY" firstAttribute="centerX" secondItem="Sbr-8t-fR7" secondAttribute="centerX" id="DFM-3v-Och"/>
+                            <constraint firstItem="eje-Xt-Iz3" firstAttribute="trailing" secondItem="1UX-Vf-Cw9" secondAttribute="trailingMargin" id="DO6-GE-EbN"/>
+                            <constraint firstItem="AeZ-hv-Bts" firstAttribute="top" secondItem="Sbr-8t-fR7" secondAttribute="bottom" constant="8" id="Pzd-A9-Hmz"/>
+                            <constraint firstItem="7IN-8E-anY" firstAttribute="top" secondItem="eje-Xt-Iz3" secondAttribute="bottom" constant="8" symbolic="YES" id="ZLp-7p-opd"/>
+                            <constraint firstItem="eje-Xt-Iz3" firstAttribute="centerX" secondItem="7IN-8E-anY" secondAttribute="centerX" id="ZoZ-du-K6Y"/>
+                            <constraint firstItem="CRK-Za-8Yf" firstAttribute="leading" secondItem="eje-Xt-Iz3" secondAttribute="leading" id="m82-ko-INz"/>
+                            <constraint firstItem="CRK-Za-8Yf" firstAttribute="trailing" secondItem="eje-Xt-Iz3" secondAttribute="trailing" id="n6f-fW-rpy"/>
+                            <constraint firstItem="X9W-5m-J1V" firstAttribute="top" secondItem="AeZ-hv-Bts" secondAttribute="bottom" constant="49" id="qUe-Sw-9Lo"/>
+                            <constraint firstItem="AeZ-hv-Bts" firstAttribute="leading" secondItem="1UX-Vf-Cw9" secondAttribute="leadingMargin" constant="70" id="tS1-ym-nTg"/>
+                            <constraint firstItem="X9W-5m-J1V" firstAttribute="top" secondItem="AeZ-hv-Bts" secondAttribute="bottom" constant="49" id="tq4-g8-ABZ"/>
+                            <constraint firstItem="7IN-8E-anY" firstAttribute="top" secondItem="1UX-Vf-Cw9" secondAttribute="top" constant="219" id="ua3-6n-wgE"/>
+                            <constraint firstItem="eje-Xt-Iz3" firstAttribute="leading" secondItem="1UX-Vf-Cw9" secondAttribute="leadingMargin" id="zzL-LO-oWe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iMy-Jc-WuD"/>
+                    <connections>
+                        <outlet property="getTranslateWords" destination="eje-Xt-Iz3" id="eCA-Ig-ZvH"/>
+                        <outlet property="setTranslateWords" destination="CRK-Za-8Yf" id="jef-Vd-bnp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jox-WK-NTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-852" y="289.20539730134936"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="pUq-Jc-YLP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Favorites" id="iPJ-y8-yht" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OC6-Ti-fef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-274" y="299"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fbb-Rx-f6a">
+            <objects>
+                <navigationController id="e5m-ho-5pL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aII-5U-HB8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="x5Q-7Q-447" kind="relationship" relationship="rootViewController" id="e5t-or-w9V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zGU-AC-siF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1562" y="289"/>
+        </scene>
+    </scenes>
+</document>
