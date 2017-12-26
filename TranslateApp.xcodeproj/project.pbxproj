@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		AE2CA6CB1FE8D87C0020E44F /* TextMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2CA6C71FE8D87C0020E44F /* TextMO+CoreDataClass.swift */; };
 		AE2CA6CC1FE8D87C0020E44F /* TextMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2CA6C81FE8D87C0020E44F /* TextMO+CoreDataProperties.swift */; };
-		AE2CA6D11FE8D9F40020E44F /* DirectionMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2CA6CF1FE8D9F40020E44F /* DirectionMO+CoreDataClass.swift */; };
-		AE2CA6D21FE8D9F40020E44F /* DirectionMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2CA6D01FE8D9F40020E44F /* DirectionMO+CoreDataProperties.swift */; };
 		AE2CA6D41FE8DCB70020E44F /* TextTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2CA6D31FE8DCB70020E44F /* TextTranslate.swift */; };
 		AE2CA6D61FE8E76E0020E44F /* TranslateSavable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2CA6D51FE8E76E0020E44F /* TranslateSavable.swift */; };
 		AE2CA6DD1FE900FD0020E44F /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2CA6DC1FE900FD0020E44F /* FavoritesController.swift */; };
@@ -34,8 +32,6 @@
 /* Begin PBXFileReference section */
 		AE2CA6C71FE8D87C0020E44F /* TextMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AE2CA6C81FE8D87C0020E44F /* TextMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AE2CA6CF1FE8D9F40020E44F /* DirectionMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DirectionMO+CoreDataClass.swift"; path = "../DirectionMO+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AE2CA6D01FE8D9F40020E44F /* DirectionMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DirectionMO+CoreDataProperties.swift"; path = "../DirectionMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AE2CA6D31FE8DCB70020E44F /* TextTranslate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTranslate.swift; sourceTree = "<group>"; };
 		AE2CA6D51FE8E76E0020E44F /* TranslateSavable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateSavable.swift; sourceTree = "<group>"; };
 		AE2CA6DC1FE900FD0020E44F /* FavoritesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
@@ -96,6 +92,18 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		AE35DAA51FF22B310088CC2F /* General */ = {
+			isa = PBXGroup;
+			children = (
+				AE35DAA31FF21AF10088CC2F /* DataBaseContainer.swift */,
+				AEA267231FEA52010069B398 /* TranslateFindable.swift */,
+				AE2CA6D51FE8E76E0020E44F /* TranslateSavable.swift */,
+				AEE092ED1FDFB2DC0015BD65 /* CoreData */,
+				AEE093011FDFC2040015BD65 /* XML */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
 		AE3915141FCD2B570007E8A3 = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +135,7 @@
 		AE3915321FCD2C660007E8A3 /* User stories */ = {
 			isa = PBXGroup;
 			children = (
-				AE35DAA31FF21AF10088CC2F /* DataBaseContainer.swift */,
+				AE35DAA51FF22B310088CC2F /* General */,
 				AE2CA6D71FE900A00020E44F /* Favorites */,
 				AE3915331FCD2CD10007E8A3 /* Words */,
 			);
@@ -147,12 +155,8 @@
 		AE3915341FCD2CF30007E8A3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AEE093011FDFC2040015BD65 /* XML */,
-				AEE092ED1FDFB2DC0015BD65 /* CoreData */,
 				AE39153B1FCD30F60007E8A3 /* WordsModel.swift */,
 				AE2CA6D31FE8DCB70020E44F /* TextTranslate.swift */,
-				AEA267231FEA52010069B398 /* TranslateFindable.swift */,
-				AE2CA6D51FE8E76E0020E44F /* TranslateSavable.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -197,8 +201,6 @@
 			children = (
 				AE2CA6C71FE8D87C0020E44F /* TextMO+CoreDataClass.swift */,
 				AE2CA6C81FE8D87C0020E44F /* TextMO+CoreDataProperties.swift */,
-				AE2CA6CF1FE8D9F40020E44F /* DirectionMO+CoreDataClass.swift */,
-				AE2CA6D01FE8D9F40020E44F /* DirectionMO+CoreDataProperties.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -294,8 +296,6 @@
 				AEE093051FDFC2EC0015BD65 /* WordsParser.swift in Sources */,
 				AE2CA6CC1FE8D87C0020E44F /* TextMO+CoreDataProperties.swift in Sources */,
 				AE39153A1FCD2F000007E8A3 /* WordsController.swift in Sources */,
-				AE2CA6D11FE8D9F40020E44F /* DirectionMO+CoreDataClass.swift in Sources */,
-				AE2CA6D21FE8D9F40020E44F /* DirectionMO+CoreDataProperties.swift in Sources */,
 				AE2CA6D41FE8DCB70020E44F /* TextTranslate.swift in Sources */,
 				AE2CA6D61FE8E76E0020E44F /* TranslateSavable.swift in Sources */,
 				AE2CA6DD1FE900FD0020E44F /* FavoritesController.swift in Sources */,

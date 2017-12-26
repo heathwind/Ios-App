@@ -21,10 +21,9 @@ class WordsModel: NSObject, XMLParserDelegate {
     private var saver: TextCoreDataSaver
     private var finder: TextCoreDataFinder
     init(with container: DataBaseContainable) {
-        saver = TextCoreDataSaver(container: container)
-        finder=TextCoreDataFinder(container: container)
         viewContext = container.viewContext
- 
+        saver = TextCoreDataSaver(container: container,context: viewContext)
+        finder=TextCoreDataFinder(container: container,context: viewContext)
         super.init()
     }
     weak var delegate: WordsController?
@@ -35,7 +34,6 @@ class WordsModel: NSObject, XMLParserDelegate {
     func translateText(text:String) {
         do{
             let test=try self.finder.find(text: text)
-            print(test.count)
             if (test.count==1){
                 guard let transText = test.first!.translatedText else { return }
                 self.delegate?.hadle(text: transText)

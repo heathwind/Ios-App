@@ -15,12 +15,13 @@ protocol TranslateFindable {
 class TextCoreDataFinder:TranslateFindable{
     
     private let container: DataBaseContainable
+    private let context:NSManagedObjectContext
     
-    init(container: DataBaseContainable) {
+    init(container: DataBaseContainable, context:NSManagedObjectContext) {
         self.container = container
+        self.context=context
     }
     func find(text: String) throws -> [TextMO] {
-        let context=container.saveContext
         let result=try TextMO.find(text: text, context: context)
         return result
     }

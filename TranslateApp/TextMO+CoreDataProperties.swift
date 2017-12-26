@@ -18,6 +18,5 @@ extension TextMO {
 
     @NSManaged public var text: String?
     @NSManaged public var translatedText: String?
-    @NSManaged public var direction: DirectionMO?
 
 }

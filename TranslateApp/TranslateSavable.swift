@@ -15,12 +15,13 @@ protocol TranslateSavable {
 class TextCoreDataSaver:TranslateSavable{
     
     private let container: DataBaseContainable
+    private let context:NSManagedObjectContext
     
-    init(container: DataBaseContainable) {
+    init(container: DataBaseContainable, context:NSManagedObjectContext) {
         self.container = container
+        self.context=context
     }
     func save(text: TextTranslate) throws {
-        let context=container.saveContext
         try TextMO.createOrUpdate(text: text, context: context)
         try context.save()
     }

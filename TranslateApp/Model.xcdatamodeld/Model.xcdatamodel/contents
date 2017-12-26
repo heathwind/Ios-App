@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="17A365" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Direction" representedClassName=".DirectionMO" syncable="YES">
-        <attribute name="direction" attributeType="String" syncable="YES"/>
-        <relationship name="text" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Text" inverseName="direction" inverseEntity="Text" syncable="YES"/>
-    </entity>
     <entity name="Text" representedClassName=".TextMO" syncable="YES">
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="translatedText" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="direction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Direction" inverseName="text" inverseEntity="Direction" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Direction" positionX="-54" positionY="18" width="128" height="75"/>
-        <element name="Text" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Text" positionX="-63" positionY="-18" width="128" height="75"/>
     </elements>
 </model>
